@@ -32,6 +32,7 @@ func GuessingGame() {
 
 	}
 	fmt.Println("Drei Mal falsch geraten")
+	fmt.Printf("Die richtige Zahl war: %v\n", expectedGuess)
 }
 
 func NumberGood(expected, n int) bool {

@@ -45,3 +45,26 @@ func Example_scope_2() {
 
 	// Output:
 }
+
+func Example_scope_3() {
+	i := 0
+
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+	}
+	fmt.Println(i)
+
+	// Output:
+}
+
+func Example_scope_4() {
+	i := 0
+
+	for i < 10 {
+		fmt.Println(i)
+		i++
+	}
+	fmt.Println(i)
+
+	// Output:
+}

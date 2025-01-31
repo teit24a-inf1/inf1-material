@@ -71,7 +71,7 @@ func Example_filter_even() {
 	// Variable für das Ergebnis definieren.
 
 	// Eine Funktion definieren, die eine Zahl n erwartet
-	// und sie genau dann auf sum addiert, wenn n gerade ist.
+	// und sie ...
 
 	// Die Funktion auf alle Elemente der Liste anwenden.
 

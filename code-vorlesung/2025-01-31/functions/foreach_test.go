@@ -66,17 +66,42 @@ func Example_sum_even() {
 }
 
 func Example_filter_even() {
-	l1 := []int{5, 2, 4, 7, 8, 42}
+	l1 := []int{5, 2, 4, 7, 8, 42, 15}
 
 	// Variable für das Ergebnis definieren.
+	l2 := []int{}
 
 	// Eine Funktion definieren, die eine Zahl n erwartet
-	// und sie genau dann auf sum addiert, wenn n gerade ist.
+	// und sie an l2 anhängt, wenn sie ungerade ist.
+	appendOdd := func(n int) {
+		if n%2 != 0 {
+			l2 = append(l2, n)
+		}
+	}
+
+	l3 := []int{}
+	append3 := func(n int) {
+		if n%3 == 0 {
+			l3 = append(l2, n)
+		}
+	}
+
+	append5 := func(n int) {
+		if n%5 == 0 {
+			l3 = append(l2, n)
+		}
+	}
 
 	// Die Funktion auf alle Elemente der Liste anwenden.
+	ForEach(l1, appendOdd)
+
+	ForEach(l1, append3)
+	ForEach(l1, append5)
 
 	// Ergebnis ausgeben.
+	fmt.Println(l2)
+	fmt.Println(l3)
 
 	// Output:
-	// [5,7]
+	// [5 7]
 }

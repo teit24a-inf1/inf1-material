@@ -11,6 +11,9 @@ MAX. PUNKTE: 5
 // der Rang größer als bei other ist.
 func (c Card) GreaterThan(other Card) bool {
 	// TODO
+	if c.Suit == other.Suit && c.Rank > other.Rank {
+		return true
+	}
 	return false
 }
 

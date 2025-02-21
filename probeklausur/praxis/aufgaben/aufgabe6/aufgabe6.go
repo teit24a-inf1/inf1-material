@@ -15,5 +15,12 @@ MAX. PUNKTE: 10
 func SymmetricDifference(l1, l2 []int) []int {
 	result := []int{}
 	// TODO
-	return result
+	if len(l1) == 0 {
+		return l2
+	}
+	if len(l2) == 0 {
+		return l1
+	}
+	if l1[0]
+	return append(result,SymmetricDifference(l1[1:],l2[1:])...)
 }

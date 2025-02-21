@@ -15,5 +15,24 @@ MAX. PUNKTE: 10
 func SymmetricDifference(l1, l2 []int) []int {
 	result := []int{}
 	// TODO
+	for _, el1 := range l1 {
+		if !Contains(l2, el1) {
+			result = append(result, el1)
+		}
+	}
+	for _, el2 := range l2 {
+		if !Contains(l1, el2) {
+			result = append(result, el2)
+		}
+	}
 	return result
+
+}
+func Contains(l []int, el int) bool {
+	for _, e := range l {
+		if e == el {
+			return true
+		}
+	}
+	return false
 }

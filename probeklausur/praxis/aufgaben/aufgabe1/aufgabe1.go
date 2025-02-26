@@ -14,8 +14,14 @@ func ShortestAbc(list []string) string {
 	// TODO
 	if len(list)==0{
 	return ""}
+	länge := 20
+	position := 20
 	search := "abc"
-	for i; el= range list{
-		if list[i]
+	for i, el:= range list{
+		if len(el)>3 && el[:3]==search{
+			länge = len(el)
+			position = i
+		}
+		
 	}
 }

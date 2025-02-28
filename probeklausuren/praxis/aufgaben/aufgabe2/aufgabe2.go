@@ -12,5 +12,20 @@ MAX. PUNKTE: 10
 // soll die leere Liste geliefert werden.
 func ExcludeStringsBetween(list []string, first, last string) []string {
 	// TODO
-	return []string{}
+	firstpos := -1
+	lastpos := -1
+	for pos, s := range list {
+		if s == first {
+			firstpos = pos
+		}
+		if s == last {
+			lastpos = pos
+		}
+
+	}
+	if lastpos <= firstpos {
+		return []string{}
+	}
+	return append(list[:firstpos], list[lastpos+1:]...)
+
 }

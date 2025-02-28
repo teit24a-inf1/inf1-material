@@ -19,7 +19,6 @@ func SymmetricDifference(l1, l2 []int) []int {
 		if !Contains(l2, el1) {
 			result = append(result, el1)
 		}
-
 	}
 	for _, el2 := range l2 {
 		if !Contains(l1, el2) {
@@ -29,13 +28,11 @@ func SymmetricDifference(l1, l2 []int) []int {
 	return result
 
 }
-
 func Contains(l []int, el int) bool {
 	for _, e := range l {
 		if e == el {
 			return true
 		}
-
 	}
 	return false
 }

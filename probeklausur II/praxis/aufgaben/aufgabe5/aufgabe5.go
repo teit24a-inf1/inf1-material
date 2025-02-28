@@ -12,7 +12,6 @@ MAX. PUNKTE: 5
 func (c Card) GreaterThan(other Card) bool {
 	// TODO
 	return c.Suit == other.Suit && c.Rank > other.Rank
-
 }
 
 // DEFINITIONS_BEGIN

@@ -22,5 +22,4 @@ func MaxElements(l1, l2 []int) []int {
 		greater = l2[0]
 	}
 	return append([]int{greater}, MaxElements(l1[1:], l2[1:])...)
-
 }

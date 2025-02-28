@@ -15,6 +15,7 @@ func ExcludeStringsBetween(list []string, first, last string) []string {
 	firstpos := -1
 	lastpos := -1
 	for pos, s := range list {
+
 		if s == first {
 			firstpos = pos
 		}
@@ -27,5 +28,4 @@ func ExcludeStringsBetween(list []string, first, last string) []string {
 		return []string{}
 	}
 	return append(list[:firstpos], list[lastpos+1:]...)
-
 }
